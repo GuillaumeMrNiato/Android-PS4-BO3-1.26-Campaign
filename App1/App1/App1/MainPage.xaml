@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            mc:Ignorable="d"
+            x:Class="App1.MainPage">
+    <ContentPage Title="PS4" IconImageSource="home.png">
+        <ContentPage.Content>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="Welcome :"/>
+                <Entry x:Name="ip" Text="192.168.1.65"/>
+                <Button Text="Connect PS4" Clicked="ConnectPS4"/>
+                <Button Text="Attach Process" Clicked="AttachProcess"/>
+                <BoxView VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="1" WidthRequest="50" Color="#5b5d68"></BoxView>
+                <Button Text="Disconnect the console"  Clicked="DisconnectPS4"/>
+                <BoxView VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="1" WidthRequest="50" Color="#5b5d68"></BoxView>
+                <Label x:Name="ConnectLabel" Text="Connected ?"  FontSize="Default" VerticalOptions="Start" HorizontalOptions="Center"/>
+                <Label x:Name="AttachLabel" Text="Process ? "  FontSize="Default" VerticalOptions="Start" HorizontalOptions="Center"/>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Mods" IconImageSource="settings.png">
+        <ContentPage.Content>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="Choose your mods :"/>
+                <Button Text="Send god mode" Clicked="GodMode"/>
+                <Button Text="give unlimited ammo" Clicked="Ammo"/>
+                <Button Text="Send Snake mod" Clicked="Snake"/>
+                <Button Text="Remove Weapons" Clicked="TakeWeap"/>
+                <Label Text="Change your weapon :"/>
+                <Picker x:Name="weaponslist" Title="Select a weapon" TitleColor="Red">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Default Weapons</x:String>
+                            <x:String>Kuda</x:String>
+                            <x:String>Pharo</x:String>
+                            <x:String>RazorBack</x:String>
+                            <x:String>VMP</x:String>
+                            <x:String>Vesper</x:String>
+                            <x:String>Weevil</x:String>
+                            <x:String>XR-2</x:String>
+                            <x:String>KN-44</x:String>
+                            <x:String>ICR-1</x:String>
+                            <x:String>HVK-30</x:String>
+                            <x:String>Man-0-War</x:String>
+                            <x:String>Sheiva</x:String>
+                            <x:String>M8A7</x:String>
+                            <x:String>KRM-262</x:String>
+                            <x:String>205 Brecci</x:String>
+                            <x:String>Argus</x:String>
+                            <x:String>Haymaker</x:String>
+                            <x:String>BRM</x:String>
+                            <x:String>Gorgon</x:String>
+                            <x:String>Locus</x:String>
+                            <x:String>Drakon</x:String>
+                            <x:String>SVG-100</x:String>
+                            <x:String>P-06</x:String>
+                            <x:String>MR6</x:String>
+                            <x:String>RK5</x:String>
+                            <x:String>L-Car 9</x:String>
+                            <x:String>Annihilator</x:String>
+                            <x:String>XM53</x:String>
+                            <x:String>War Machine</x:String>
+                            <x:String>Combat Knife</x:String>
+                            <x:String>Scythe</x:String>
+                            <x:String>WEAPON_CHASER</x:String>
+                            <x:String>WEAPON_CHASER 2</x:String>
+                            <x:String>WEAPON_CHASER_SNIPER</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button Text="Send Weapon" Clicked="GiveWeapons"/>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+</TabbedPage>
