@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.1" package="bo3.campaign.mrniatomodsps4" android:installLocation="preferExternal">
+	<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28" />
+	<application android:label="BO3 1.0 Modding APK - Campaign (1.26/5.05)" android:icon="@drawable/home"></application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+</manifest>
